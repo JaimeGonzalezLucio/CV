@@ -1,0 +1,145 @@
+:root{
+    --bg1: #0d1b2a;
+    --bg2: #1b263b;
+    --bg3: #415a77;
+    --bg4: #778da9;
+    --bg5: #e0e1dd;
+    
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{    
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-color: var(--bg2);
+}
+
+a,p,h1,h2{
+    color: var(--bg5);
+}
+
+#blob{
+    height: 150px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--bg4), var(--bg3), var(--bg5));        
+    animation: rotate 20s infinite;
+    filter: blur(90px);
+    z-index: -100;
+}
+
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+  }
+/*
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+  
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+*/
+nav{
+    width: 100%;        
+    position: fixed;
+    top: 0;    
+}
+
+.nav__content{
+    display: flex;    
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+.nav__logo{
+    text-decoration: none;    
+    font-family: caveat;
+    font-size: 1.5rem;
+}
+
+.nav__items a{    
+    padding: 0 20px;
+    transition: .3s;
+}
+
+.nav__items a:hover{
+    border-bottom: 1px solid var(--bg5);
+    transition: .3s;    
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+#principal{
+    display: flex;
+}
+
+.primero{
+    width: 50%;
+}
+
+.segundo{        
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    width: 50%;
+    margin: 0 auto;    
+    margin-right: 5%;
+    border: 5px solid black;
+    background: var(--bg3);
+    height: 75%;
+    border-radius: 30% 70% 70% 30% / 28% 30% 70% 72% ;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.main_text{
+    margin-left: 10%;    
+}
+
+.title{
+    font-size: 2.5rem;
+    height: min-content;
+}
