@@ -1,72 +1,61 @@
-
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show')
-        }else{
-            entry.target.classList.remove('show')
-        }
-    });
-});
-
-const hiddenElements = document.querySelectorAll('.hidden')
-hiddenElements.forEach((el) => observer.observe(el))
-
-/// text
+//text
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
 
-document.querySelector("h1").onmouseover = event => {  
+function startAnimation() {
   let iteration = 0;
-  
+
   clearInterval(interval);
-  
+
   interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
+    const h1Element = document.querySelector("h1");
+    h1Element.innerText = h1Element.innerText
       .split("")
       .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
+        if (index < iteration) {
+          return h1Element.dataset.value[index];
         }
-      
-        return letters[Math.floor(Math.random() * 26)]
+
+        return letters[Math.floor(Math.random() * 26)];
       })
       .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
+
+    if (iteration >= h1Element.dataset.value.length) {
       clearInterval(interval);
     }
-    
+
     iteration += 1 / 3;
   }, 30);
 }
 
+//cursor
 
-let interval2 = null;
+const blob = document.getElementById("blob")
 
-document.querySelector("h2").onmouseover = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval2);
-  
-  interval2 = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
-        }
-      
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval2);
-    }
-    
-    iteration += 1 / 3;
-  }, 30);
+document.body.onpointermove = event => {
+    const{ clientX, clientY } = event;
+
+    blob.animate({
+        left: `${clientX}px`,
+        top: `${clientY}px`
+    },{duration: 3000, fill: "forwards"});
 }
+
+//cards
+
+document.getElementById("cards").onmousemove = e => {
+  for(const card of document.getElementsByClassName("card")) {
+    const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  };
+}
+
+setInterval(startAnimation, 3000);
+console.log("R u ok?");
+

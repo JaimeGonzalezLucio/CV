@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Poppins&display=swap');
-      </style>
+    </style>
 </head>
 <body>
     
@@ -20,11 +20,11 @@
                 <a href="https://www.instagram.com/mckeys__/" target="_blank" class="nav__logo">McKeys</a>
             </div>
             <div class="nav__items">
-                <a href="#principal">Inicio</a>
-                <a href="#about">Acerca de mi</a>
-                <a href="#skills">Habilidades</a>
-                <a href="#projects">Proyectos</a>
-                <a href="#experience">Experiencia</a>
+                <a href="#principal"><span>{{</span> Inicio <span>}}</span></a>
+                <a href="#about"><span>{{</span>  Acerca de mi <span>}}</span></a>
+                <a href="#skills"><span>{{</span>  Habilidades <span>}}</span></a>
+                <a href="#projects"><span>{{</span>  Proyectos <span>}}</span></a>
+                <a href="#experience"><span>{{</span>  Experiencia <span>}}</span></a>
             </div>
         </div>
     </nav>
@@ -32,8 +32,18 @@
     <section id="principal" class="hidden">
         <div class="primero">
             <div class="main_text">
-                <p>¡Hola! Soy </p><h1 class="title" data-value="Jaime González">Jaime González</h1>
+                <span class="normalText "><span class="pink normalText">welcome</span><span class="purple">(</span><span class="green">name</span><span class="purple">)</span><span class="grey">{</span></span>
+                    <span class="normalText spanBlock spanItalic">// home text</span>
+                <span class="normalText spanBlock yellow">console<span class="pink">.</span>log<span class="purple">(</span><span class="cyan">`</span></span>
+                <p>¡Hola! soy</p>                
+                    <div class="title_name">
+                        <span class="orange inlineSpan">$</span><span class="blue inlineSpan">{<span class="cyan">"</span></span>
+                            <h1 class="title" data-value="Jaime González">Jaime González</h1>
+                        <span class="blue inlineSpan"><span class="cyan">"</span> }</span>
+                    </div>
                 <p>Desarrollador Frontend</p>                                               
+                <span class="normalText spanBlock"><span class="cyan">`</span><span class="purple">)</span><span class="green">;</span></span>
+                <span class="normalText grey">}</span>
             </div>
         </div>
         <div class="segundo">
@@ -41,23 +51,197 @@
         </div>
     </section>
     
-    <section id="about" class="hidden">
-        <p>about</p>
+    <section id="about" class="hidden">        
+        <div class="about__text">
+            <span class="pink">about</span><span class="purple">()</span><span class="grey">{</span>
+            <span class="spanItalic spanBlock"> // Dont move this code</span>
+            <span class="spanBlock grey"><span class="pink">return</span> <span class="yellow">tag </span><span class="cyan">`</span>Sobre mí, <span class="orange">$</span><span class="blue">{</span> <span class="purple">this</span> <span class="red">.</span> <span class="green">message</span> <span class="blue">}</span> !<span class="cyan">`</span><span class="green">;</span></span>                        
+                <h5>Sobre mí</h5>                        
+                <p>
+                    <span class="grey"><</span>
+                    <span class="blue">p</span>
+                    <span class="grey">></span>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur sed tenetur voluptatum necessitatibus consequuntur adipisci omnis et sunt, repudiandae ex voluptate, ducimus est at, dignissimos sapiente! Molestias porro doloremque dignissimos?
+                    <span class="grey"><</span>
+                    <span class="grey">/</span>
+                    <span class="blue">p</span>
+                    <span class="grey">></span>
+                </p>            
+            <span class="grey">}</span>
+        </div>
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+            <div class="spanFlex">
+                <span class="grey"><</span>            
+                <span class="blue">div</span>
+                <span class="grey">class="gallery"></span>
+            </div>
+                <img class="image" src="images/IMG_20211120_091357.jpg" draggable="false" />
+                <img class="image" src="images/308067602_452481730186395_4100296044973518092_n (1).jpg" draggable="false" alt="WTB" />
+                <img class="image" src="images/IMG_20221007_154253.jpg" draggable="false" />
+                <img class="image" src="images/309632829_1444807039372492_4782103610573685083_n (1).jpg" draggable="false" />
+                <img class="image" src="images/IMG_20221007_153118.jpg" draggable="false" />
+                <img class="image" src="images/307976818_623467179226073_4984600332026983939_n (1).jpg" draggable="false" />
+                <img class="image" src="images/image1.jpg" draggable="false" />
+                <img class="image" src="images/307838210_464243309064594_4992344141874422973_n (1).jpg" draggable="false" />            
+                <img class="image" src="images/Screenshot_20200616-103419~2.png" draggable="false" />      
+            <div class="spanFlex">
+                <span class="grey"><</span>
+                <span class="grey">/</span>
+                <span class="blue">div</span>
+                <span class="grey">></span>      
+            </div>
+        </div>          
     </section>
 
     <section id="skills" class="hidden">
-        <p>about</p>
+        <div class="skills_text">
+            <span class="pink">flashlight</span><span class="purple">()</span><span class="grey">{</span>
+            <span class="spanItalic spanBlock"> // hover</span>    
+            <span class="yellow spanBlock">card<span class="pink">.</span>style<span class="pink">.</span>setProperty<span class="purple">(</span><span class="cyan">"</span><span class="grey">--mouse-x</span><span class="cyan">"</span>, <span class="cyan">`</span><span class="orange">$</span><span class="blue">{</span><span class="green">x</span><span class="blue">}</span><span class="grey">px</span><span class="cyan">`</span><span class="purple">)</span>;</span>                      
+            <span class="yellow spanBlock">card<span class="pink">.</span>style<span class="pink">.</span>setProperty<span class="purple">(</span><span class="cyan">"</span><span class="grey">--mouse-y</span><span class="cyan">"</span>, <span class="cyan">`</span><span class="orange">$</span><span class="blue">{</span><span class="green">y</span><span class="blue">}</span><span class="grey">px</span><span class="cyan">`</span><span class="purple">)</span>;</span>
+            <span class="grey spanBlock">}</span>
+        </div>
+        <div id="cards">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                    <img src="icons/html5.svg" alt="">
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">                    
+                    <div class="card-info-title">                        
+                        <h3>HTML</h3>                        
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                    <img src="icons/css3-alt.svg" alt="">
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">                    
+                    <div class="card-info-title">                        
+                        <h3>CSS</h3>                        
+                    </div>    
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                    <img src="icons/sass.svg" alt="">
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">                    
+                    <div class="card-info-title">                        
+                        <h3>SASS</h3>                        
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                    <img src="icons/mobile-solid.svg" alt="">
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">                    
+                    <div class="card-info-title">                        
+                        <h3>Responsive design</h3>                        
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                    <img src="icons/js.svg" alt="">
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">                    
+                    <div class="card-info-title">                        
+                        <h3>Javascript</h3>                        
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                    <img src="icons/angular.svg" alt="">
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">
+                    <div class="card-info-title">
+                        <h3>Angular</h3>                        
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
     </section>
 
     <section id="projects" class="hidden">
-        <p>about</p>
+        <div class="projects-container">
+          <div class="box">
+            <img src="images/presidencia.png" alt="">
+            <div class="box_text">              
+              <p>Proyecto 1</p>
+              <p>Empresa</p>
+            </div>
+          </div>
+          <div class="box">
+            <img src="images/presidencia 2.png" alt="">
+            <div class="box_text">
+              <p>Proyecto 1</p>
+              <p>Empresa</p>
+            </div>
+          </div>
+          <div class="box">
+            <img src="images/presidencia.png" alt="">
+            <div class="box_text">
+              <p>Proyecto 1</p>
+              <p>Empresa</p>
+            </div>
+          </div>
+          <div class="box">
+            <img src="images/presidencia.png" alt="">
+            <div class="box_text">
+              <p>Proyecto 1</p>
+              <p>Empresa</p>
+            </div>
+          </div>
+          <div class="box">
+            <img src="images/presidencia.png" alt="">
+            <div class="box_text">
+              <p>Proyecto 1</p>
+              <p>Empresa</p>
+            </div>
+          </div>
+          <div class="box">
+            <img src="images/presidencia.png" alt="">
+            <div class="box_text">
+              <p>Proyecto 1</p>
+              <p>Empresa</p>
+            </div>
+          </div>
+        </div>        
     </section>    
 
     <section id="experience" class="hidden">
-        <p>about</p>
+        <p>Experiencia</p>
     </section>
 
-</body>
-<script src="app.js"></script>    
+</body> 
+<script src="images.js"></script>
 <script defer src="script.js"></script>
 </html>
